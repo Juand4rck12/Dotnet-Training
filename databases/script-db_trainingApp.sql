@@ -62,7 +62,8 @@ CREATE TABLE `result_training` (
   `result` decimal(3,2) NOT NULL,
   PRIMARY KEY (`id_result_training`),
   KEY `FK_skill_idx` (`id_skill`),
-  CONSTRAINT `FK__competitor` FOREIGN KEY (`id_result_training`) REFERENCES `competitor` (`id_competitor`) ON DELETE CASCADE ON UPDATE CASCADE,
+  KEY `FK__competitor_idx` (`id_competitor`),
+  CONSTRAINT `FK__competitor` FOREIGN KEY (`id_competitor`) REFERENCES `competitor` (`id_competitor`),
   CONSTRAINT `FK__skill` FOREIGN KEY (`id_skill`) REFERENCES `skill` (`id_skill`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -143,4 +144,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-30 16:24:19
+-- Dump completed on 2025-08-03 14:14:09
