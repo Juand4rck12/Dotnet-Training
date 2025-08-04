@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrainingApp.models
 {
-    internal class Skill
+    internal class Skill    
     {
         public long IdSkill {  get; set; }
         public string Code { get; set; }
